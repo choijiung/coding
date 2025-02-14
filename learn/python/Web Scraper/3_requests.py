@@ -1,6 +1,6 @@
 import requests
 res = requests.get("https://google.com")
-#res = requests.get("https://nadocoding.tistory.com/")
+# res = requests.get("https://nadocoding.tistory.com/")
 print("응답코드 : ", res.status_code)
 res.raise_for_status()
 # if res.status_code == requests.codes.ok:

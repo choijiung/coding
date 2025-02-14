@@ -71,5 +71,3 @@ print(len(movies))
 for movie in movies:
     title = movie.find("div", attrs={"class":"Epkrse"}).get_text()
     print(title)
-
-#어려워...
