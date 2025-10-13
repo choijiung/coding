@@ -68,7 +68,9 @@ col1.metric("최대 감염자 수", f"{peak_I:,.0f}")
 col2.metric("최대 시점 (일)", f"{peak_t:0.1f}")
 final_R = R[-1]
 col3.metric("최종 누적 회복", f"{final_R:,.0f}")
-plt.rcParams['font.family'] = 'AppleGothic'
+font_path = 'NanumGothic.ttf'
+font_name = plt.matplotlib.font_manager.FontProperties(fname=font_path).get_name()
+plt.rcParams['font.family'] = font name
 fig, ax = plt.subplots(figsize=(10,5))
 ax.plot(t, S, label="S(t) 비감염자", linewidth=2)
 ax.plot(t, I, label="I(t) 감염자", linewidth=2)
