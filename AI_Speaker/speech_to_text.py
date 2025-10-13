@@ -1,7 +1,7 @@
-import speech_recognition as sr 
+import speech_to_text as sr 
 r = sr.Recognizer()
 with sr.Microphone() as sourse:
-    print("듣고있어여")
+    print("듣고있어요")
     audio = r.listen(sourse)
 
 try:
