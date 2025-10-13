@@ -68,16 +68,13 @@ col1.metric("최대 감염자 수", f"{peak_I:,.0f}")
 col2.metric("최대 시점 (일)", f"{peak_t:0.1f}")
 final_R = R[-1]
 col3.metric("최종 누적 회복", f"{final_R:,.0f}")
-font_path = 'NanumGothic.ttf'
-font_name = plt.matplotlib.font_manager.FontProperties(fname=font_path).get_name()
-plt.rcParams['font.family'] = font_name
 fig, ax = plt.subplots(figsize=(10,5))
-ax.plot(t, S, label="S(t) 비감염자", linewidth=2)
-ax.plot(t, I, label="I(t) 감염자", linewidth=2)
-ax.plot(t, R, label="R(t) 회복/제거", linewidth=2)
-ax.set_xlabel("시간 (일)")
-ax.set_ylabel("사람 수")
-ax.set_title("SIR 모델 시뮬레이션")
+ax.plot(t, S, label="S(t) susceptible", linewidth=2)
+ax.plot(t, I, label="I(t) infected", linewidth=2)
+ax.plot(t, R, label="R(t) recovered", linewidth=2)
+ax.set_xlabel("time (day)")
+ax.set_ylabel("number")
+ax.set_title("SIR model simulation")
 ax.legend()
 ax.grid(True)
 
