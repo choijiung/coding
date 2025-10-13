@@ -70,7 +70,7 @@ final_R = R[-1]
 col3.metric("최종 누적 회복", f"{final_R:,.0f}")
 font_path = 'NanumGothic.ttf'
 font_name = plt.matplotlib.font_manager.FontProperties(fname=font_path).get_name()
-plt.rcParams['font.family'] = font name
+plt.rcParams['font.family'] = font_name
 fig, ax = plt.subplots(figsize=(10,5))
 ax.plot(t, S, label="S(t) 비감염자", linewidth=2)
 ax.plot(t, I, label="I(t) 감염자", linewidth=2)
